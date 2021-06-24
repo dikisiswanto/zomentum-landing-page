@@ -1,0 +1,42 @@
+{% set groups = [
+    {
+      title: 'Product',
+      links: ['Features', 'Pricing', 'Integrations', 'Product']
+    },
+    {
+      title: 'Company',
+      links: ['About us', 'Contact us', 'Submit a ticket', 'Privacy policy', 'Terms & conditions']
+    },
+    {
+      title: 'Users',
+      links: ['Login', 'Get a demo', 'Talk to us', 'Privacy policy', 'Terms & conditions']
+    },
+    {
+      title: 'Guides',
+      links: ['MSP', 'MSP sales']
+    },
+    {
+      title: 'Contact Us',
+      links: ['Address']
+    }
+  ] %}
+<footer class="bg-black text-white">
+  <div class="max-w-[996px] mx-auto pt-14 pb-10 space-y-12">
+    <div class="flex justify-between gap-x-3">
+      {% for group in groups %}  
+        <ul>
+          <li class="mb-3 font-semibold text-lg">{{ group.title }}</li>
+          {% for link in group.links %}
+            <li>
+              <a href="#" class="py-0.5 inline-block hover:text-opacity-80">{{ link }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+    <div class="flex text-sm">
+      <span class="w-3/4">© 2020 Pactora Inc. All rights reserved.</span>
+      <span class="w-1/4">Follow us on social</span>
+    </div>
+  </div>
+</footer>
