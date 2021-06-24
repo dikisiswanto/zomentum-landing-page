@@ -1,4 +1,5 @@
 # zomentum-landing-page
+![Screenshot](https://i.ibb.co/mNMv7tn/Screen-Shot-2021-06-24-at-17-15-54.png)
 
 This repository aims to practice my skills about how to develop and slicing UI design from Figma into responsive web page. I use Gulp for task runner, Nunjucks for HTML renderer, and Tailwindcss as base css framework with JIT mode is active. For transition and animation, I use AOS (Animate On Scroll) library.
 
