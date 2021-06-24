@@ -1,21 +1,37 @@
 {% set navs = ['features', 'integrations', 'pricing', 'company', 'blog'] -%}
 
-<header class="bg-white shadow">
+<header class="bg-white shadow sticky top-0 z-50">
   <div class="flex max-w-[1200px] px-5 mx-auto justify-between items-center">
-    <a href="">
-      <img src="./assets/img/logo.svg" class="w-[200px] h-[inherit]">
+    <a href="#">
+      <img src="./assets/img/logo.svg" class="max-w-[200px] max-h-[inherit] py-5 lg:py-0">
     </a>
-    <nav>
-      <ul>
+    <nav x-data="{ open: false }" class="overflow-hidden">
+      <!-- Trigger button -->
+      <button class="h-[inherit] inline-block lg:hidden" x-on:click="open = !open">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <ul class="lg:block fixed lg:relative lg:translate-x-0 w-full top-0 left-0 h-screen lg:h-auto z-50 shadow-lg transition-all duration-500 transform px-5 py-4 h-auto overflow-y-auto bg-white lg:py-0 -translate-x-full" :class="open ? 'translate-x-0' : ''">
+        <!-- Close button -->
+        <div class="flex justify-between lg:hidden mb-5 px-3">
+          <img src="./assets/img/logo.svg" class="max-w-[200px]">
+          <button class="inline-block text-right" x-on:click="open = !open">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </button>
+        </div>
+
         {% for nav in navs -%}
-          <li class="inline-block capitalize font-medium">
-            <a href="#" class="py-5 px-3 inline-block hover:text-blue-primary transition duration-300 ">{{ nav }}</a>
+          <li class="block lg:inline-block capitalize font-medium">
+            <a href="#" class="py-2 lg:py-5 px-3 block lg:inline-block hover:text-blue-primary transition duration-300 ">{{ nav }}</a>
           </li>
         {%- endfor %}
-        <li class="inline-block font-medium">
-          <a href="#" class="py-2 px-3 mx-2 text-blue-primary border border-blue-primary hover:bg-blue-primary hover:text-white transition duration-200">Get a demo</a>
+        <li class="block lg:inline-block font-medium">
+          <a href="#" class="py-2 px-3 mx-2 my-2 lg:y-0 inline-block text-blue-primary border border-blue-primary hover:bg-blue-primary hover:text-white transition duration-200">Get a demo</a>
         </li>
-        <li class="inline-block font-medium">
+        <li class="block lg:inline-block font-medium">
           <a href="#" class="inline-flex items-center px-3 py-5 hover:text-blue-primary transition duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
