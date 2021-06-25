@@ -67,14 +67,14 @@
         <div class="lg:max-w-[45%] space-y-4" data-aos="fade-up" data-aos-delay="200">
           <h4 class="lg:w-3/4 text-2xl font-bold leading-tight">{{ benefit.heading }}</h4>
           <p>{{ benefit.description }}</p>
-          {% if loop.index !== 1 %}
+          {% if loop.index !== 1 -%}
             <a href="#" class="text-blue-primary inline-block font-semibold hover:text-opacity-80" aria-label="signup now">
               Signup Now
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 stroke-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
-          {% endif %}
+          {%- endif %}
         </div>
       </div>
     {%- endfor %}
