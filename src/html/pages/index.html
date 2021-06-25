@@ -7,9 +7,9 @@
     <img src="./assets/img/hero-left.svg" alt="nofollow" data-aos="fade-in" class="absolute top-full left-[-10%] lg:left-0 lg:top-[75%] w-48 lg:w-auto opacity-25">
     <img src="./assets/img/hero-right.svg" alt="nofollow" data-aos="fade-in" class="absolute top-full right-[2%] w-28 lg:w-auto lg:top-[55%]">
     <div class="flex flex-col h-[inherit] justify-center gap-y-3 items-center text-white mx-auto max-w-[650px] text-center px-5 pt-8">
-      <h2 class="text-4xl lg:text-5xl font-bold leading-tight" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">Find the right partners to fuel your business growth</h2>
-      <p class="leading-snug" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">Join a vibrant community of MSPs to forge long-lasting relationships with partners that help you create excellent customer experiences</p>
-      <a href="" class="bg-black text-white py-3 px-5 mt-8 shadow font-semibold hover:shadow-xl transition duration-200" data-aos="fade-up" data-aos-delay="700">Register today</a>
+      <h2 class="text-4xl lg:text-5xl font-bold leading-tight" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">Find the right partners to fuel your business growth</h2>
+      <p class="leading-snug" data-aos="fade-up" data-aos-delay="400" data-aos-duration="400">Join a vibrant community of MSPs to forge long-lasting relationships with partners that help you create excellent customer experiences</p>
+      <a href="#" class="bg-black text-white py-3 px-5 mt-8 shadow font-semibold hover:shadow-xl transition duration-200" data-aos="fade-up" data-aos-delay="600">Register today</a>
     </div>
   </section>
 
@@ -19,7 +19,7 @@
     'Come closer to finding your next customer',
     'Grow your business with a single click'
   ] -%}
-  <section class="relative mt-[50px] pt-40 pb-28 text-center bg-[#00FF85] bg-opacity-[0.05] z-[-2]">
+  <section class="relative mt-[50px] pt-40 pb-28 text-center bg-[#00FF85] bg-opacity-[0.04] z-[-2]">
     <div class="max-w-[824px] mx-auto">
       <h3 class="font-semibold text-3xl lg:text-4xl" data-aos="fade-in" data-aos-delay="100">List. Sell. Grow</h3>
       <ul class="grid grid-cols-1 lg:grid-cols-3 gap-5 py-5 mt-3 px-8 lg:px-0">
@@ -62,13 +62,13 @@
     {% for benefit in benefits -%}  
       <div class="flex flex-col lg:flex-row space-y-2 gap-x-16 px-5 lg:px-0 items-center justify-between {{ "lg:flex-row-reverse" if loop.index % 2 === 1}}">
         <div class="lg:max-w-[55%]" data-aos="fade-up" data-aos-delay="200">
-          <img src="./assets/img/benefit-{{ loop.index }}.svg" alt="benefit 1" class="max-w-full mx-auto">
+          <img src="./assets/img/benefit-{{ loop.index }}.svg" alt="benefit {{ loop.index }}" class="max-w-full mx-auto" width="100%" height="auto">
         </div>
         <div class="lg:max-w-[45%] space-y-4" data-aos="fade-up" data-aos-delay="200">
           <h4 class="lg:w-3/4 text-2xl font-bold leading-tight">{{ benefit.heading }}</h4>
           <p>{{ benefit.description }}</p>
           {% if loop.index !== 1 %}
-            <a href="#" class="text-blue-primary inline-block font-semibold hover:text-opacity-80">
+            <a href="#" class="text-blue-primary inline-block font-semibold hover:text-opacity-80" aria-label="signup now">
               Signup Now
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 stroke-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
